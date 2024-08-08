@@ -2,7 +2,7 @@ name: your_package_name
 description: A description of your package.
 version: 1.0.0
 homepage: https://yourhomepage.com
-repository: https://github.com/yourusername/your-repository
+repository: https://github.com/prdalai/dropdown_month_year_selector
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
