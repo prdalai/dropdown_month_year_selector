@@ -1,5 +1,5 @@
-import 'package:dropdown_month_year_selector/src/month_year_dropdown_calendar.dart';
 import 'package:flutter/material.dart';
+import 'month_year_dropdown_calendar.dart';
 
 class MonthYearDropdownForm extends StatefulWidget {
   const MonthYearDropdownForm({super.key});
@@ -17,23 +17,22 @@ class _MonthYearDropdownFormState extends State<MonthYearDropdownForm> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        GestureDetector(
-          onTap: () {
-            _showCalendarDialog(context);
-          },
-          child: TextFormField(
-            controller: _textEditingController,
-            decoration: const InputDecoration(
-              labelText: 'Select Date',
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GestureDetector(
+            onTap: () {
+              _showCalendarDialog(context);
+            },
+            child: TextFormField(
+              controller: _textEditingController,
+              decoration: const InputDecoration(
+                labelText: 'Select Date',
+              ),
+              enabled: false,
             ),
-            enabled: false,
           ),
         ),
         const SizedBox(height: 16),
-        Text(
-          'Selected Date: $selectedDate',
-          style: const TextStyle(fontSize: 18),
-        ),
       ],
     );
   }
