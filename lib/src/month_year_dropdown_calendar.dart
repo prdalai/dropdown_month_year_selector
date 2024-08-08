@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 class MonthYearDropdownCalendar extends StatefulWidget {
   final Function(String) onDateSelected;
 
-  MonthYearDropdownCalendar({required this.onDateSelected});
+  const MonthYearDropdownCalendar({super.key, required this.onDateSelected});
 
   @override
   _MonthYearDropdownCalendarState createState() =>
@@ -46,7 +46,7 @@ class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
                 );
               }).toList(),
             ),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
             DropdownButton<String>(
               value: selectedYear,
               onChanged: (String? newValue) {
@@ -72,7 +72,7 @@ class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
               widget.onDateSelected(selectedDate);
             }
           },
-          child: Text('Select Date'),
+          child: const Text('Select Date'),
         ),
       ],
     );
@@ -90,11 +90,11 @@ class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
     final firstDayOfMonth = DateFormat('yyyy-MM-dd').parse('$year-${monthIndex.toString().padLeft(2, '0')}-01');
     final int startWeekday = firstDayOfMonth.weekday;
 
-    return Container(
+    return SizedBox(
       width: 300,
       height: 300,
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 7,
         ),
         itemBuilder: (context, index) {
@@ -102,7 +102,7 @@ class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
             return Center(
               child: Text(
                 ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][index],
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             );
           } else if (index < startWeekday + daysInMonth) {
