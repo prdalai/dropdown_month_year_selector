@@ -1,5 +1,5 @@
+import 'package:dropdown_month_year_selector/src/month_year_dropdown_form.dart';
 import 'package:flutter/material.dart';
-import 'package:your_package_name/dropdown_month_year_selector.dart';
 
 void main() {
   runApp(MyApp());
