@@ -7,7 +7,7 @@ A Flutter package that provides a customizable month and year dropdown calendar.
 
 ## Installation
 
-Install my-project with yaml
+Install my-project with yaml 
 
 ```yaml
 dependencies:
