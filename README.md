@@ -11,7 +11,7 @@ Install my-project with yaml
 
 ```yaml
 dependencies:
-  dropdown_month_year_selector: ^1.0.3
+  dropdown_month_year_selector: ^1.0.4
 ```
 
 ## Screenshots

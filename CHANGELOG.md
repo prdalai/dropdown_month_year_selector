@@ -11,4 +11,8 @@
 
 ## [1.0.3] - 2024-08-08
 ### Added
-- added assets video and image for demo 
+- added assets video and image for demo
+
+## [1.0.4] - 2024-08-08
+### Added
+- added readme update 
