@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Month and Year Dropdown Calendar Example'),
         ),
-        body: Center(
+        body: const Center(
           child: MonthYearDropdownForm(),
         ),
       ),
