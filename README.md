@@ -13,11 +13,11 @@ Install my-project with yaml
 dependencies:
   dropdown_month_year_selector: ^1.0.4
 ```
-
 ## Screenshots
 
-![App Screenshot](https://github.com/prdalai/dropdown_month_year_selector/blob/main/assets/images/example_image.PNG?raw=true)
+<img src="https://github.com/prdalai/dropdown_month_year_selector/blob/main/assets/images/example_image.PNG?raw=true" alt="App Screenshot" style="max-width: 100%; height: auto;"/>
+
+<img src="https://github.com/prdalai/dropdown_month_year_selector/blob/main/assets/images/RPReplay_Final1723118198.gif?raw=true" alt="App Screenshot" style="max-width: 100%; height: auto;"/>
 
 
-![App Screenshot](https://github.com/prdalai/dropdown_month_year_selector/blob/main/assets/images/RPReplay_Final1723118198.gif?raw=true)
 
