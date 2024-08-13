@@ -17,7 +17,7 @@ dependencies:
 
 | ![Image](https://github.com/prdalai/dropdown_month_year_selector/blob/main/assets/images/RPReplay_Final1723118198.gif) | ![Image](https://github.com/prdalai/dropdown_month_year_selector/blob/main/assets/images/example_image.PNG) |
 | :------------: | :------------: |
-| **dropdown_month_year_selector demo | **dropdown_month_year_selector |
+| **Dropdown_month_year_selector** demo | **Dropdown_month_year_selector** screenshot |
 
 
 
