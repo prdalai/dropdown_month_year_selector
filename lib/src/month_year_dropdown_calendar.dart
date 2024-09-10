@@ -6,15 +6,27 @@ class MonthYearDropdownCalendar extends StatefulWidget {
   const MonthYearDropdownCalendar({super.key, required this.onDateSelected});
 
   @override
-  _MonthYearDropdownCalendarState createState() => _MonthYearDropdownCalendarState();
+  _MonthYearDropdownCalendarState createState() =>
+      _MonthYearDropdownCalendarState();
 }
 
 class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
   List<String> months = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
   ];
-  List<String> years = List.generate(DateTime.now().year - 1959, (index) => (1960 + index).toString());
+  List<String> years = List.generate(
+      DateTime.now().year - 1959, (index) => (1960 + index).toString());
   String selectedMonth = 'August';
   String selectedYear = '2023';
   int? selectedDay;
@@ -80,12 +92,14 @@ class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
     int daysInMonth = DateTime(year, monthIndex + 1, 0).day;
 
     // Adjust for leap year in February
-    if (monthIndex == 2 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
+    if (monthIndex == 2 &&
+        (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
       daysInMonth = 29;
     }
 
     final firstDayOfMonth = DateTime(year, monthIndex, 1);
-    final int startWeekday = firstDayOfMonth.weekday % 7;  // Adjust startWeekday to start from Sunday
+    final int startWeekday =
+        firstDayOfMonth.weekday % 7; // Adjust startWeekday to start from Sunday
 
     return SizedBox(
       width: 300,
@@ -102,8 +116,9 @@ class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             );
-          } else if (index >= 7 + startWeekday && index < 7 + startWeekday + daysInMonth) {
-            final day = index - startWeekday - 6;  // Adjust day calculation
+          } else if (index >= 7 + startWeekday &&
+              index < 7 + startWeekday + daysInMonth) {
+            final day = index - startWeekday - 6; // Adjust day calculation
             return GestureDetector(
               onTap: () {
                 setState(() {
@@ -119,7 +134,9 @@ class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
                   child: Text(
                     '$day',
                     style: TextStyle(
-                      fontWeight: selectedDay == day ? FontWeight.bold : FontWeight.normal,
+                      fontWeight: selectedDay == day
+                          ? FontWeight.bold
+                          : FontWeight.normal,
                       color: selectedDay == day ? Colors.white : Colors.black,
                     ),
                   ),
@@ -130,7 +147,9 @@ class _MonthYearDropdownCalendarState extends State<MonthYearDropdownCalendar> {
             return Container();
           }
         },
-        itemCount: 7 + startWeekday + daysInMonth,  // Adjust itemCount to include startWeekday offset
+        itemCount: 7 +
+            startWeekday +
+            daysInMonth, // Adjust itemCount to include startWeekday offset
       ),
     );
   }
